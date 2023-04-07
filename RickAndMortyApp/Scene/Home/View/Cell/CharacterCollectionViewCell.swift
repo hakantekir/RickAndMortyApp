@@ -16,9 +16,8 @@ class CharacterCollectionViewCell: UICollectionViewCell, NibProtocol, ReuseProto
     @IBOutlet private weak var characterImage: UIImageView!
     @IBOutlet  weak var titleLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    func configure(data: CharacterCellProtocol) {
+        titleLabel.text = data.titleText
+        characterImage.loadURL(url: data.imagePath)
     }
-
 }

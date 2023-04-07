@@ -30,3 +30,19 @@ struct Location: Codable {
     let name: String?
     let url: String?
 }
+
+struct Info: Codable {
+    let count: Int?
+    let pages: Int?
+    let next: String?
+    let prev: String?
+}
+
+struct Results: Codable {
+    let characters: [Character]?
+}
+
+struct CharactersResponse: Codable {
+    let info: Info?
+    let results: [Character]?
+}

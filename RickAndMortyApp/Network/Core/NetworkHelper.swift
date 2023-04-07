@@ -29,7 +29,7 @@ struct APIError: Decodable, Error {
 class NetworkHelper {
     static let shared = NetworkHelper()
     
-    private let baseURL = "https://rickandmortyapi.com/api/"
+    private let baseURL = "https://rickandmortyapi.com/"
     
     func requestURL(endPoint: String) -> String {
         baseURL + endPoint

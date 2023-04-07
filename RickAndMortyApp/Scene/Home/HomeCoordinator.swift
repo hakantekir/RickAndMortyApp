@@ -14,4 +14,9 @@ class HomeCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
     }
+    
+    func start(){
+        let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(HomeViewController.self)")
+        navigationController.show(controller, sender: nil)
+    }
 }
