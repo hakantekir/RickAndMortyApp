@@ -16,7 +16,7 @@ class HomeViewModel {
     var errorCallback: ((String)->())?
     
     func getCharacters() {
-        managaer.getCharacters { result in
+        managaer.getCharacters(page: 1) { result in
             switch result {
             case .success(let response):
                 if let characters = response.results {

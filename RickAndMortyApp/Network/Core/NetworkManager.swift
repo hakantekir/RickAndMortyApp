@@ -11,12 +11,22 @@ class NetworkManager {
     static let shared = NetworkManager()
     
     func request<T: Codable>(responseType: T.Type,
-                             url: String,
                              httpMethod: HTTPMethods,
+                             url: String,
+                             queryItems: [String:String]? = nil,
                              header: [String:String]? = nil,
                              body: Data? = nil,
                              completion: @escaping((Result<(T), NetworkError>) -> Void)) {
-        guard let url = URL(string: url) else {
+        guard var urlComponents = URLComponents(string: url) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+        
+        if let queryItems = queryItems {
+            urlComponents.queryItems = queryItems.map { URLQueryItem(name: $0, value: $1) }
+        }
+        
+        guard let url = urlComponents.url else {
             completion(.failure(.invalidURL))
             return
         }
