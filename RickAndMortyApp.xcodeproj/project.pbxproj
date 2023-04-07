@@ -18,6 +18,13 @@
 		A2C1B87F29E02E66002CEDFE /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C1B87E29E02E66002CEDFE /* NetworkHelper.swift */; };
 		A2C1B88129E02EBA002CEDFE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C1B88029E02EBA002CEDFE /* NetworkManager.swift */; };
 		A2C1B88329E02F67002CEDFE /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C1B88229E02F67002CEDFE /* HomeCoordinator.swift */; };
+		A2CEA94429E056CC00A8D180 /* CharacterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEA94229E056CC00A8D180 /* CharacterCollectionViewCell.swift */; };
+		A2CEA94529E056CC00A8D180 /* CharacterCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2CEA94329E056CC00A8D180 /* CharacterCollectionViewCell.xib */; };
+		A2CEA94829E05ADE00A8D180 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEA94729E05ADE00A8D180 /* HomeViewModel.swift */; };
+		A2CEA94A29E05BB800A8D180 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2CEA94929E05BB800A8D180 /* UICollectionView+Extension.swift */; };
+		A2F2B66629E034F50074447C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2B66529E034F50074447C /* HomeViewController.swift */; };
+		A2F2B66929E0374E0074447C /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2B66829E0374E0074447C /* Character.swift */; };
+		A2F2B67929E042700074447C /* NibReuseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2F2B67829E042700074447C /* NibReuseProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +41,13 @@
 		A2C1B87E29E02E66002CEDFE /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
 		A2C1B88029E02EBA002CEDFE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		A2C1B88229E02F67002CEDFE /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		A2CEA94229E056CC00A8D180 /* CharacterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCollectionViewCell.swift; sourceTree = "<group>"; };
+		A2CEA94329E056CC00A8D180 /* CharacterCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCollectionViewCell.xib; sourceTree = "<group>"; };
+		A2CEA94729E05ADE00A8D180 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		A2CEA94929E05BB800A8D180 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
+		A2F2B66529E034F50074447C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A2F2B66829E0374E0074447C /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		A2F2B67829E042700074447C /* NibReuseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibReuseProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +83,7 @@
 				A2C1B87429E02CF1002CEDFE /* App */,
 				A2C1B87729E02DD1002CEDFE /* Coordinator */,
 				A2C1B87629E02DAD002CEDFE /* Network */,
+				A2F2B67429E041D90074447C /* Util */,
 				A2C1B87529E02DA6002CEDFE /* Scene */,
 				A2C1B86929E0293D002CEDFE /* LaunchScreen.storyboard */,
 				A2C1B86229E0293C002CEDFE /* ViewController.swift */,
@@ -117,6 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				A2C1B88229E02F67002CEDFE /* HomeCoordinator.swift */,
+				A2F2B66729E0373C0074447C /* Model */,
+				A2F2B65F29E033B80074447C /* View */,
+				A2CEA94629E05AC200A8D180 /* ViewModel */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -128,6 +146,57 @@
 				A2C1B87E29E02E66002CEDFE /* NetworkHelper.swift */,
 			);
 			path = Core;
+			sourceTree = "<group>";
+		};
+		A2CEA94629E05AC200A8D180 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A2CEA94729E05ADE00A8D180 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A2F2B65F29E033B80074447C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A2F2B66529E034F50074447C /* HomeViewController.swift */,
+				A2F2B66A29E03B390074447C /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A2F2B66729E0373C0074447C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A2F2B66829E0374E0074447C /* Character.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A2F2B66A29E03B390074447C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A2CEA94229E056CC00A8D180 /* CharacterCollectionViewCell.swift */,
+				A2CEA94329E056CC00A8D180 /* CharacterCollectionViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A2F2B67429E041D90074447C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A2F2B67529E041EB0074447C /* Extension */,
+				A2F2B67829E042700074447C /* NibReuseProtocol.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		A2F2B67529E041EB0074447C /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A2CEA94929E05BB800A8D180 /* UICollectionView+Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +259,7 @@
 			files = (
 				A2C1B86B29E0293D002CEDFE /* LaunchScreen.storyboard in Resources */,
 				A2C1B86829E0293D002CEDFE /* Assets.xcassets in Resources */,
+				A2CEA94529E056CC00A8D180 /* CharacterCollectionViewCell.xib in Resources */,
 				A2C1B86629E0293C002CEDFE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -205,10 +275,16 @@
 				A2C1B86329E0293C002CEDFE /* ViewController.swift in Sources */,
 				A2C1B87C29E02E29002CEDFE /* Storyboarded.swift in Sources */,
 				A2C1B88129E02EBA002CEDFE /* NetworkManager.swift in Sources */,
+				A2F2B66629E034F50074447C /* HomeViewController.swift in Sources */,
 				A2C1B85F29E0293C002CEDFE /* AppDelegate.swift in Sources */,
+				A2CEA94A29E05BB800A8D180 /* UICollectionView+Extension.swift in Sources */,
+				A2CEA94429E056CC00A8D180 /* CharacterCollectionViewCell.swift in Sources */,
 				A2C1B88329E02F67002CEDFE /* HomeCoordinator.swift in Sources */,
+				A2CEA94829E05ADE00A8D180 /* HomeViewModel.swift in Sources */,
+				A2F2B66929E0374E0074447C /* Character.swift in Sources */,
 				A2C1B87F29E02E66002CEDFE /* NetworkHelper.swift in Sources */,
 				A2C1B86129E0293C002CEDFE /* SceneDelegate.swift in Sources */,
+				A2F2B67929E042700074447C /* NibReuseProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
