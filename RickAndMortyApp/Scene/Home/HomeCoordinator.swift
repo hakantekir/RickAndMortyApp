@@ -19,4 +19,10 @@ class HomeCoordinator: Coordinator {
         let controller = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "\(HomeViewController.self)")
         navigationController.show(controller, sender: nil)
     }
+    
+    func showCharacterDetails(character: Character){
+        let controller = CharacterDetailsViewController.instantiate(name: .main)
+        controller.viewModel = CharacterDetailsViewModel(character: character)
+        navigationController.show(controller, sender: nil)
+    }
 }

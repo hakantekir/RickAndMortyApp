@@ -68,4 +68,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         }
         return header
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.coordinator?.showCharacterDetails(character: viewModel.characters[indexPath.item])
+    }
 }
