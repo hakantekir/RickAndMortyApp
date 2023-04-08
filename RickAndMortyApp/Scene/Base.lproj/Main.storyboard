@@ -100,8 +100,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-tZ-muf">
-                                <rect key="frame" x="19.999999999999993" y="590" width="116.33333333333331" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created at (in API):" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lz7-tZ-muf">
+                                <rect key="frame" x="19.999999999999993" y="590" width="116.33333333333331" height="60.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -137,13 +137,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1,2,3,4,5,6,22,51" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJl-25-eDY">
-                                <rect key="frame" x="156.33333333333334" y="554" width="151.00000000000003" height="31"/>
+                                <rect key="frame" x="156.33333333333331" y="554" width="150.33333333333331" height="31"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5 May 2017, 09:48:44" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVs-kM-JWy">
-                                <rect key="frame" x="156.33333333333337" y="590" width="193.66666666666663" height="31"/>
+                                <rect key="frame" x="156.33333333333337" y="590" width="193.66666666666663" height="60.333333333333371"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -213,7 +213,6 @@
                             <constraint firstItem="91P-rS-Gy2" firstAttribute="centerX" secondItem="H2J-Q7-27q" secondAttribute="centerX" id="tLT-bj-8zX"/>
                             <constraint firstItem="cJl-25-eDY" firstAttribute="centerY" secondItem="2JN-Gu-ku2" secondAttribute="centerY" id="ukT-3t-1pH"/>
                             <constraint firstItem="kXK-Sd-1yq" firstAttribute="centerY" secondItem="rHJ-ck-IRy" secondAttribute="centerY" id="uou-dh-Mb1"/>
-                            <constraint firstItem="H2J-Q7-27q" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zVs-kM-JWy" secondAttribute="trailing" constant="5" id="vPc-yK-kmf"/>
                             <constraint firstItem="WCW-cQ-hZB" firstAttribute="leading" secondItem="LvR-6a-VsT" secondAttribute="leading" id="zkF-ra-LuW"/>
                         </constraints>
                     </view>
