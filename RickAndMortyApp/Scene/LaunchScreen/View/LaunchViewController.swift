@@ -18,13 +18,14 @@ class LaunchViewController: UIViewController {
     }()
     
     private let label: UILabel = {
-        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 100, height: 30))
+        let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 30))
         label.font = UIFont(name: "Avenir", size: 30)
         label.textAlignment = .center
-        if UserDefaults.standard.bool(forKey: "First Launch") {
-            label.text = "Welcome"
-        } else {
+        if UserDefaults.standard.bool(forKey: "isLaunchedBefore") {
             label.text = "Hello"
+        } else {
+            label.text = "Welcome"
+            UserDefaults.standard.setValue(true, forKey: "isLaunchedBefore")
         }
         return label
     }()
