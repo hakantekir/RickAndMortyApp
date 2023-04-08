@@ -9,6 +9,8 @@ import UIKit
 
 class CharacterDetailsViewController: UIViewController, Storyboarded {
 
+    var viewModel: CharacterDetailsViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

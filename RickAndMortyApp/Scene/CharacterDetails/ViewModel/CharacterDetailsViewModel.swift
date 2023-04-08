@@ -8,5 +8,9 @@
 import Foundation
 
 class CharacterDetailsViewModel {
+    let character: Character
     
+    init(character: Character) {
+        self.character = character
+    }
 }
