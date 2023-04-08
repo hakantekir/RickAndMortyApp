@@ -25,11 +25,11 @@ class HomeViewController: UIViewController {
     }
     
     func configureViewModel() {
-        viewModel.errorCallback = { [weak self] errorMessage in
+        viewModel.errorCallback = { errorMessage in
             print(errorMessage)
         }
         viewModel.successCallback = { [weak self] in
-            DispatchQueue.main.sync {
+            DispatchQueue.main.async {
                 self?.collectionView.reloadData()
             }
         }

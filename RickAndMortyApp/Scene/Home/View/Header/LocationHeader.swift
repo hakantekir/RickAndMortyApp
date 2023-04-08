@@ -31,6 +31,9 @@ class LocationHeader: UICollectionReusableView, NibProtocol, ReuseProtocol {
         viewModel.successCallback = { [weak self] in
             DispatchQueue.main.sync {
                 self?.collectionView.reloadData()
+                if let location = self?.viewModel.locations[0] {
+                    self?.selectionCallback?(location)
+                }
             }
         }
         viewModel.getLocations()
@@ -53,8 +56,12 @@ extension LocationHeader: UICollectionViewDelegate, UICollectionViewDataSource, 
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = collectionView.frame.width * 0.3
-        let height = collectionView.frame.height
-        return CGSize(width: width, height: height)
+        let label = UILabel()
+        label.text = viewModel.locations[indexPath.item].titleText
+        label.font = UIFont(name: "Avenir", size: 17)
+        var labelSize = label.sizeThatFits(CGSize(width: CGFloat.greatestFiniteMagnitude, height: label.frame.size.height))
+        labelSize.width += 10
+        labelSize.height += 10
+        return labelSize
     }
 }

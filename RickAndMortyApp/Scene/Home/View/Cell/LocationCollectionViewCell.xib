@@ -16,8 +16,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="178" height="90"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-gn-Fo6">
-                        <rect key="frame" x="56.666666666666657" y="0.0" width="65" height="90"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-gn-Fo6">
+                        <rect key="frame" x="0.0" y="0.0" width="178" height="90"/>
                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -28,6 +28,7 @@
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="aHh-gn-Fo6" secondAttribute="bottom" id="OQW-iM-Jyo"/>
                 <constraint firstItem="aHh-gn-Fo6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XgF-26-t4G"/>
+                <constraint firstItem="aHh-gn-Fo6" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" id="eBM-WS-MAw"/>
                 <constraint firstItem="aHh-gn-Fo6" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="f7B-rG-KjV"/>
             </constraints>
             <size key="customSize" width="178" height="90"/>

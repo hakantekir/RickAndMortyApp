@@ -18,6 +18,6 @@ class CharacterCollectionViewCell: UICollectionViewCell, NibProtocol, ReuseProto
     
     func configure(data: CharacterCellProtocol) {
         titleLabel.text = data.titleText
-        characterImage.loadURL(url: data.imagePath)
+        characterImage.loadURL(url: data.imagePath, placeholder: UIImage(named: "placeholder"))
     }
 }
