@@ -10,7 +10,7 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     var window: UIWindow?
-    var coordinator: HomeCoordinator?
+    var coordinator: LaunchCoordinator?
     
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let navigationController = UINavigationController()
         
-        coordinator = HomeCoordinator(navigationController: navigationController)
+        coordinator = LaunchCoordinator(navigationController: navigationController)
         coordinator?.start()
         
         window.rootViewController = navigationController

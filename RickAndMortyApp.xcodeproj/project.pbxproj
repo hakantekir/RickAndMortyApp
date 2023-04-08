@@ -14,6 +14,8 @@
 		A2228E6E29E0E218005E6E98 /* LocationCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2228E6C29E0E218005E6E98 /* LocationCollectionViewCell.xib */; };
 		A2228E7029E0E50E005E6E98 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2228E6F29E0E50E005E6E98 /* Location.swift */; };
 		A2228E7229E0EA86005E6E98 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2228E7129E0EA86005E6E98 /* Info.swift */; };
+		A246EFAB29E1E7D300E56E6D /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246EFAA29E1E7D300E56E6D /* LaunchViewController.swift */; };
+		A246EFAF29E1EBB900E56E6D /* LaunchCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246EFAE29E1EBB900E56E6D /* LaunchCoordinator.swift */; };
 		A253AC6C29E1ADFB009716E2 /* CharacterDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A253AC6B29E1ADFB009716E2 /* CharacterDetailsViewModel.swift */; };
 		A253AC6E29E1AE13009716E2 /* CharacterDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A253AC6D29E1AE13009716E2 /* CharacterDetailsViewController.swift */; };
 		A253AC7029E1AE35009716E2 /* CharacterDetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A253AC6F29E1AE35009716E2 /* CharacterDetailsCoordinator.swift */; };
@@ -47,6 +49,8 @@
 		A2228E6C29E0E218005E6E98 /* LocationCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCollectionViewCell.xib; sourceTree = "<group>"; };
 		A2228E6F29E0E50E005E6E98 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		A2228E7129E0EA86005E6E98 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		A246EFAA29E1E7D300E56E6D /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		A246EFAE29E1EBB900E56E6D /* LaunchCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchCoordinator.swift; sourceTree = "<group>"; };
 		A253AC6B29E1ADFB009716E2 /* CharacterDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewModel.swift; sourceTree = "<group>"; };
 		A253AC6D29E1AE13009716E2 /* CharacterDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsViewController.swift; sourceTree = "<group>"; };
 		A253AC6F29E1AE35009716E2 /* CharacterDetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailsCoordinator.swift; sourceTree = "<group>"; };
@@ -92,6 +96,23 @@
 				A2228E6629E0CFFC005E6E98 /* LocationHeader.xib */,
 			);
 			path = Header;
+			sourceTree = "<group>";
+		};
+		A246EFAC29E1EB8A00E56E6D /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A246EFAE29E1EBB900E56E6D /* LaunchCoordinator.swift */,
+				A246EFAD29E1EBA000E56E6D /* View */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		A246EFAD29E1EBA000E56E6D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A246EFAA29E1E7D300E56E6D /* LaunchViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A253AC6829E1AD8A009716E2 /* CharacterDetails */ = {
@@ -166,6 +187,7 @@
 				A2C1B86929E0293D002CEDFE /* LaunchScreen.storyboard */,
 				A2C1B87829E02DFD002CEDFE /* Home */,
 				A253AC6829E1AD8A009716E2 /* CharacterDetails */,
+				A246EFAC29E1EB8A00E56E6D /* LaunchScreen */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -362,9 +384,11 @@
 				A2228E6729E0CFFC005E6E98 /* LocationHeader.swift in Sources */,
 				A2CEA94A29E05BB800A8D180 /* UICollectionView+Extension.swift in Sources */,
 				A2CEA94429E056CC00A8D180 /* CharacterCollectionViewCell.swift in Sources */,
+				A246EFAF29E1EBB900E56E6D /* LaunchCoordinator.swift in Sources */,
 				A2C1B88329E02F67002CEDFE /* HomeCoordinator.swift in Sources */,
 				A2228E7029E0E50E005E6E98 /* Location.swift in Sources */,
 				A2CEA94829E05ADE00A8D180 /* HomeViewModel.swift in Sources */,
+				A246EFAB29E1E7D300E56E6D /* LaunchViewController.swift in Sources */,
 				A2F2B66929E0374E0074447C /* Character.swift in Sources */,
 				A253AC6E29E1AE13009716E2 /* CharacterDetailsViewController.swift in Sources */,
 				A2C1B87F29E02E66002CEDFE /* NetworkHelper.swift in Sources */,
