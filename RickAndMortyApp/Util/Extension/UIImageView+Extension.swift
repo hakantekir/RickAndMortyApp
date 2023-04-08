@@ -9,7 +9,8 @@ import Foundation
 import UIKit
 
 extension UIImageView {
-    func loadURL(url: String) {
+    func loadURL(url: String, placeholder: UIImage? = nil) {
+        image = placeholder
         if let url = URL(string: url) {
             let task = URLSession.shared.dataTask(with: url) { data, response, error in
                 guard let data = data, error == nil else { return }
