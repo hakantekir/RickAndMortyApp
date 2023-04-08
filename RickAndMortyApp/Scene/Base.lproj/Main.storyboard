@@ -217,6 +217,16 @@
                             <constraint firstItem="WCW-cQ-hZB" firstAttribute="leading" secondItem="LvR-6a-VsT" secondAttribute="leading" id="zkF-ra-LuW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="characterImage" destination="91P-rS-Gy2" id="iNf-RO-6ny"/>
+                        <outlet property="createdLabel" destination="zVs-kM-JWy" id="ROq-Iv-Wmf"/>
+                        <outlet property="episodesLabel" destination="cJl-25-eDY" id="0sf-y8-ov4"/>
+                        <outlet property="genderLabel" destination="kXK-Sd-1yq" id="3ak-uc-NZO"/>
+                        <outlet property="locationLabel" destination="1MP-r5-Tbd" id="2jG-W7-njz"/>
+                        <outlet property="originLabel" destination="WCW-cQ-hZB" id="T5a-In-Lbx"/>
+                        <outlet property="specyLabel" destination="iV7-rv-uSa" id="hKD-hn-oKi"/>
+                        <outlet property="statusLabel" destination="LvR-6a-VsT" id="DdN-FA-EDH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sha-Aq-NUf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
