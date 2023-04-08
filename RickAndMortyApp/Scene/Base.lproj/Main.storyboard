@@ -31,14 +31,21 @@
                                     <outlet property="delegate" destination="xI5-P7-Ean" id="byh-fB-O3I"/>
                                 </connections>
                             </collectionView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="OtR-Tk-Jgd">
+                                <rect key="frame" x="30" y="64" width="333" height="110"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xDv-4U-sKF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LUc-MT-IxG" firstAttribute="height" secondItem="7Ov-Vq-UXT" secondAttribute="height" multiplier="0.75" id="Ici-7j-tjJ"/>
                             <constraint firstItem="LUc-MT-IxG" firstAttribute="width" secondItem="7Ov-Vq-UXT" secondAttribute="width" id="J9s-f0-QS3"/>
+                            <constraint firstItem="LUc-MT-IxG" firstAttribute="top" secondItem="OtR-Tk-Jgd" secondAttribute="bottom" constant="5" id="KC0-aI-wnD"/>
                             <constraint firstItem="xDv-4U-sKF" firstAttribute="bottom" secondItem="LUc-MT-IxG" secondAttribute="bottom" id="MD5-n7-JNp"/>
+                            <constraint firstItem="OtR-Tk-Jgd" firstAttribute="leading" secondItem="xDv-4U-sKF" secondAttribute="leading" constant="30" id="dHt-qi-ANt"/>
+                            <constraint firstItem="xDv-4U-sKF" firstAttribute="trailing" secondItem="OtR-Tk-Jgd" secondAttribute="trailing" constant="30" id="nUw-kh-oGf"/>
                             <constraint firstItem="LUc-MT-IxG" firstAttribute="centerX" secondItem="xDv-4U-sKF" secondAttribute="centerX" id="nsK-bi-msr"/>
+                            <constraint firstItem="OtR-Tk-Jgd" firstAttribute="top" secondItem="xDv-4U-sKF" secondAttribute="top" constant="5" id="vMU-Vr-nzZ"/>
                         </constraints>
                     </view>
                     <connections>
@@ -233,6 +240,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="logo" width="1280" height="391"/>
         <image name="placeholder" width="300" height="300"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
