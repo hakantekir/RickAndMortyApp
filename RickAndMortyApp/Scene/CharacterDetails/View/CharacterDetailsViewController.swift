@@ -18,11 +18,48 @@ class CharacterDetailsViewController: UIViewController, Storyboarded {
     @IBOutlet weak var episodesLabel: UILabel!
     @IBOutlet weak var createdLabel: UILabel!
     
+    @IBOutlet var labelsToTopConstraint: NSLayoutConstraint!
+    @IBOutlet var labelsToLeftConstraint: NSLayoutConstraint!
+    @IBOutlet var imageToLeftConstraint: NSLayoutConstraint!
+    @IBOutlet var imageCenterContraint: NSLayoutConstraint!
+    
     var viewModel: CharacterDetailsViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if UIDevice.current.orientation.isLandscape {
+            applyLandscapeConstraints()
+        } else {
+            applyPortraitConstraints()
+        }
+    }
+    
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        if UIDevice.current.orientation.isLandscape {
+            applyLandscapeConstraints()
+        } else {
+            applyPortraitConstraints()
+        }
+    }
+    
+    func applyLandscapeConstraints() {
+        labelsToTopConstraint.constant = 20
+        labelsToLeftConstraint.constant = 315
+        imageCenterContraint.isActive = false
+        imageToLeftConstraint.isActive = true
+    }
+    
+    func applyPortraitConstraints() {
+        labelsToTopConstraint.constant = 315
+        labelsToLeftConstraint.constant = 0
+        imageToLeftConstraint.isActive = false
+        imageCenterContraint.isActive = true
     }
     
     fileprivate func configureUI(){
