@@ -32,6 +32,7 @@ class LocationHeader: UICollectionReusableView, NibProtocol, ReuseProtocol {
             DispatchQueue.main.sync {
                 self?.collectionView.reloadData()
                 if let location = self?.viewModel.locations[0] {
+                    self?.collectionView.selectItem(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: [])
                     self?.selectionCallback?(location)
                 }
             }

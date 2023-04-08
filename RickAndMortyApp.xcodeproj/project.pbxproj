@@ -164,8 +164,8 @@
 			children = (
 				A2C1B86429E0293C002CEDFE /* Main.storyboard */,
 				A2C1B86929E0293D002CEDFE /* LaunchScreen.storyboard */,
-				A253AC6829E1AD8A009716E2 /* CharacterDetails */,
 				A2C1B87829E02DFD002CEDFE /* Home */,
+				A253AC6829E1AD8A009716E2 /* CharacterDetails */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
