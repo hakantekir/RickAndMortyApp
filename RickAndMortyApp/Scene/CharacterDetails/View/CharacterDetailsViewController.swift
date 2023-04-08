@@ -36,7 +36,10 @@ class CharacterDetailsViewController: UIViewController, Storyboarded {
             dateFormatter.dateFormat = "d MMM yyyy, hh:mm:ss"
             formattedDate = dateFormatter.string(from: date)
         }
-        title = character?.name
+        let titleLabel = UILabel()
+        titleLabel.text = character?.name
+        titleLabel.font = UIFont(name: "Avenir-heavy", size: 17)
+        navigationItem.titleView = titleLabel
         characterImage.loadURL(url: character?.imagePath ?? "", placeholder: UIImage(named: "placeholder"))
         statusLabel.text = character?.status
         specyLabel.text = character?.species
