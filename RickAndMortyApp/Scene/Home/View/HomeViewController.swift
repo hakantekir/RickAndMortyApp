@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
             print(errorMessage)
         }
         viewModel.successCallback = { [weak self] in
-            DispatchQueue.main.sync {
+            DispatchQueue.main.async {
                 self?.collectionView.reloadData()
             }
         }
