@@ -31,6 +31,9 @@ class LocationHeader: UICollectionReusableView, NibProtocol, ReuseProtocol {
         viewModel.successCallback = { [weak self] in
             DispatchQueue.main.sync {
                 self?.collectionView.reloadData()
+                if let location = self?.viewModel.locations[0] {
+                    self?.selectionCallback?(location)
+                }
             }
         }
         viewModel.getLocations()
