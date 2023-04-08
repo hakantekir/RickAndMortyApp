@@ -33,7 +33,7 @@ class CharacterDetailsViewController: UIViewController, Storyboarded {
         var formattedDate = ""
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSZ"
         if let date = dateFormatter.date(from: character?.created ?? "") {
-            dateFormatter.dateFormat = "MMM d, yyyy 'at' h:mm a"
+            dateFormatter.dateFormat = "d MMM yyyy, hh:mm:ss"
             formattedDate = dateFormatter.string(from: date)
         }
         characterImage.loadURL(url: character?.imagePath ?? "", placeholder: UIImage(named: "placeholder"))
