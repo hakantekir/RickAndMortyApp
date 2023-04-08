@@ -12,11 +12,13 @@ class HomeViewModel {
     var characters = [Character]()
     let managaer = HomeManager.shared
     
+    var location: Location?
+    
     var successCallback: (()->())?
     var errorCallback: ((String)->())?
     
     func getCharacters() {
-        managaer.getCharacters(page: 1) { result in
+        managaer.getCharacters(location: location?.id , page: 1) { result in
             switch result {
             case .success(let response):
                 if let characters = response.results {

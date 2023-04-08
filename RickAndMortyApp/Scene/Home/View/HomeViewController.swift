@@ -21,10 +21,10 @@ class HomeViewController: UIViewController {
     
     func configureUI() {
         collectionView.registerCell(type: CharacterCollectionViewCell.self)
+        collectionView.registerSupplementaryView(type: LocationHeader.self, ofKind: UICollectionView.elementKindSectionHeader)
     }
     
     func configureViewModel() {
-        viewModel.getCharacters()
         viewModel.errorCallback = { [weak self] errorMessage in
             print(errorMessage)
         }
@@ -34,6 +34,7 @@ class HomeViewController: UIViewController {
             }
         }
         viewModel.coordinator = HomeCoordinator(navigationController: navigationController ?? UINavigationController())
+        viewModel.getCharacters()
     }
 }
 
@@ -53,5 +54,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         let width = collectionView.frame.width
         let height = collectionView.frame.height * 0.3
         return CGSize(width: width, height: height)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        CGSize(width: collectionView.frame.width, height: 50)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let header: LocationHeader = collectionView.dequeueSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, for: indexPath)
+        header.selectionCallback = { [weak self] location in
+            self?.viewModel.location = location
+            self?.viewModel.getCharacters()
+        }
+        return header
     }
 }

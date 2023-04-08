@@ -13,7 +13,7 @@ class NetworkManager {
     func request<T: Codable>(responseType: T.Type,
                              httpMethod: HTTPMethods,
                              url: String,
-                             queryItems: [String:String]? = nil,
+                             queryItems: [String:String?]? = nil,
                              header: [String:String]? = nil,
                              body: Data? = nil,
                              completion: @escaping((Result<(T), NetworkError>) -> Void)) {
@@ -32,6 +32,8 @@ class NetworkManager {
         }
         
         var request = URLRequest(url: url)
+        
+        print(url)
         request.httpMethod = httpMethod.rawValue
         request.allHTTPHeaderFields = header
         request.httpBody = body
