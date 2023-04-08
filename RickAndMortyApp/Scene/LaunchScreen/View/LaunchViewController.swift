@@ -22,9 +22,9 @@ class LaunchViewController: UIViewController {
         label.font = UIFont(name: "Avenir", size: 30)
         label.textAlignment = .center
         if UserDefaults.standard.bool(forKey: "isLaunchedBefore") {
-            label.text = "Hello"
+            label.text = "Hello!"
         } else {
-            label.text = "Welcome"
+            label.text = "Welcome!"
             UserDefaults.standard.setValue(true, forKey: "isLaunchedBefore")
         }
         return label
