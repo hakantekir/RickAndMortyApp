@@ -13,6 +13,7 @@ class NetworkManager {
     func request<T: Codable>(responseType: T.Type,
                              httpMethod: HTTPMethods,
                              url: String,
+                             pathParameter: String? = nil,
                              queryItems: [String:String?]? = nil,
                              header: [String:String]? = nil,
                              body: Data? = nil,
@@ -26,14 +27,16 @@ class NetworkManager {
             urlComponents.queryItems = queryItems.map { URLQueryItem(name: $0, value: $1) }
         }
         
+        if let pathParameter = pathParameter {
+            urlComponents.path += pathParameter + "/"
+        }
+        
         guard let url = urlComponents.url else {
             completion(.failure(.invalidURL))
             return
         }
         
         var request = URLRequest(url: url)
-        
-        print(url)
         request.httpMethod = httpMethod.rawValue
         request.allHTTPHeaderFields = header
         request.httpBody = body

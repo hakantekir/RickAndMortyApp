@@ -18,13 +18,14 @@ class HomeViewModel {
     var errorCallback: ((String)->())?
     
     func getCharacters() {
-        managaer.getCharacters(location: location?.id , page: 1) { result in
+        guard let characters = (location?.residents?.map { $0.components(separatedBy: "/").last }.compactMap { $0 }) else {
+            return
+        }
+        managaer.getCharacters(characters: characters , page: 1) { result in
             switch result {
             case .success(let response):
-                if let characters = response.results {
-                    self.characters = characters
-                    self.successCallback?()
-                }
+                self.characters = response
+                self.successCallback?()
             case .failure(let error):
                 self.errorCallback?(error.localizedDescription)
             }
