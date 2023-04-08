@@ -223,6 +223,7 @@
                             <constraint firstItem="H2J-Q7-27q" firstAttribute="trailing" secondItem="bEv-s1-E8q" secondAttribute="trailing" id="O8d-0e-Fna"/>
                             <constraint firstItem="bEv-s1-E8q" firstAttribute="leading" secondItem="H2J-Q7-27q" secondAttribute="leading" id="aqH-3W-xFk"/>
                             <constraint firstItem="H2J-Q7-27q" firstAttribute="bottom" secondItem="bEv-s1-E8q" secondAttribute="bottom" constant="20" id="hVe-u1-p1t"/>
+                            <constraint firstItem="H2J-Q7-27q" firstAttribute="trailing" secondItem="OCy-6R-5ek" secondAttribute="trailing" priority="999" constant="50" id="ojE-69-GqB"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
