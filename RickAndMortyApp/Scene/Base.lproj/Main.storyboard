@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LUc-MT-IxG">
-                                <rect key="frame" x="0.0" y="179" width="393" height="639"/>
+                                <rect key="frame" x="9.6666666666666572" y="179" width="373.66666666666674" height="639"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X1b-Ym-aUu">
                                     <size key="itemSize" width="128" height="128"/>
@@ -39,7 +39,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="LUc-MT-IxG" firstAttribute="height" secondItem="7Ov-Vq-UXT" secondAttribute="height" multiplier="0.75" id="Ici-7j-tjJ"/>
-                            <constraint firstItem="LUc-MT-IxG" firstAttribute="width" secondItem="7Ov-Vq-UXT" secondAttribute="width" id="J9s-f0-QS3"/>
+                            <constraint firstItem="LUc-MT-IxG" firstAttribute="width" secondItem="7Ov-Vq-UXT" secondAttribute="width" multiplier="0.95" id="J9s-f0-QS3"/>
                             <constraint firstItem="LUc-MT-IxG" firstAttribute="top" secondItem="OtR-Tk-Jgd" secondAttribute="bottom" constant="5" id="KC0-aI-wnD"/>
                             <constraint firstItem="xDv-4U-sKF" firstAttribute="bottom" secondItem="LUc-MT-IxG" secondAttribute="bottom" id="MD5-n7-JNp"/>
                             <constraint firstItem="OtR-Tk-Jgd" firstAttribute="leading" secondItem="xDv-4U-sKF" secondAttribute="leading" constant="30" id="dHt-qi-ANt"/>
