@@ -12,7 +12,7 @@ class LaunchViewController: UIViewController {
     var coordinator: LaunchCoordinator?
     
     private let imageView: UIImageView = {
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 150))
+        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 300, height: 100))
         imageView.image = UIImage(named: "logo")
         return imageView
     }()
@@ -32,6 +32,12 @@ class LaunchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if self.traitCollection.userInterfaceStyle == .light {
+            view.backgroundColor = .white
+        } else {
+            view.backgroundColor = .black
+        }
+        
         view.addSubview(imageView)
         view.addSubview(label)
     }
@@ -49,7 +55,7 @@ class LaunchViewController: UIViewController {
     private func animate(){
         UIView.animate(withDuration: 1.5, animations: {
             let sizeX = self.view.frame.size.width * 5
-            let sizeY = sizeX / 2
+            let sizeY = sizeX / 3
             let diffX = sizeX - self.view.frame.size.width
             let diffY = self.view.frame.size.height - sizeY
             self.imageView.frame = CGRect(x: -(diffX/2),
