@@ -28,19 +28,20 @@ class CharacterDetailsViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        if UIDevice.current.orientation.isLandscape {
-            applyLandscapeConstraints()
-        } else {
+        let size = UIScreen.main.bounds.size
+        if size.width < size.height {
             applyPortraitConstraints()
+        } else {
+            applyLandscapeConstraints()
         }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
+        handleOrientation()
+    }
+    
+    func handleOrientation() {
         if UIDevice.current.orientation.isLandscape {
             applyLandscapeConstraints()
         } else {
