@@ -57,7 +57,7 @@ class LaunchViewController: UIViewController {
                                           width: sizeX,
                                           height: sizeY)
         })
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 2, animations: {
             self.imageView.alpha = 0
         }) { done in
             if done {
