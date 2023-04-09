@@ -9,20 +9,37 @@ import Foundation
 
 class LocationViewModel {
     let manager = HomeManager.shared
-    var locations = [Location]()
+    var locations = [Location?]()
+    var currentPage = 1
+    var isLastPage = false
     
     var successCallback: (() -> Void)?
-    func getLocations(){
-        manager.getLocations(page: 1) { result in
+    
+    func getLocations() {
+        manager.getLocations(page: currentPage) { result in
+            if self.locations.count != 0 {
+                self.locations.removeLast()
+            }
             switch result {
             case .success(let response):
                 if let locations = response.results {
-                    self.locations = locations
+                    self.locations.append(contentsOf: locations)
+                    self.isLastPage = self.currentPage == response.info?.pages
+                    if !self.isLastPage {
+                        self.locations.append(nil)
+                    }
                     self.successCallback?()
                 }
             case .failure(let error):
                 print(error.localizedDescription)
             }
+        }
+    }
+    
+    func pagination() {
+        if !isLastPage {
+            currentPage += 1
+            getLocations()
         }
     }
 }
