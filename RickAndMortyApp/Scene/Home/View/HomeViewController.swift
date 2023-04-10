@@ -25,8 +25,14 @@ class HomeViewController: UIViewController, Storyboarded {
     }
     
     func configureViewModel() {
-        viewModel.errorCallback = { errorMessage in
+        viewModel.errorCallback = { [weak self] errorMessage in
             print(errorMessage)
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Error", message: "Please, check your internet connection!", preferredStyle: .alert)
+                let close = UIAlertAction(title: "Close", style: .cancel, handler: nil)
+                alert.addAction(close)
+                self?.present(alert, animated: true)
+            }
         }
         viewModel.successCallback = { [weak self] in
             DispatchQueue.main.async {
@@ -69,6 +75,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         header.selectionCallback = { [weak self] location in
             self?.viewModel.location = location
             self?.viewModel.getCharacters()
+        }
+        
+        header.viewModel.errorCallback = { [weak self] errorMessage in
+            print(errorMessage)
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Error", message: "Please, check your internet connection!", preferredStyle: .alert)
+                let close = UIAlertAction(title: "Close", style: .cancel) { _ in
+                    header.viewModel.getLocations()
+                }
+                alert.addAction(close)
+                self?.present(alert, animated: true)
+            }
         }
         return header
     }
