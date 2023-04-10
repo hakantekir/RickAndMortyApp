@@ -13,6 +13,7 @@ class LocationViewModel {
     var currentPage = 1
     var isLastPage = false
     
+    var errorCallback: ((String) -> Void)?
     var successCallback: (() -> Void)?
     
     func getLocations() {
@@ -31,7 +32,7 @@ class LocationViewModel {
                     self.successCallback?()
                 }
             case .failure(let error):
-                print(error.localizedDescription)
+                self.errorCallback?(error.localizedDescription)
             }
         }
     }
