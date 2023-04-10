@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A22230B429E2DF5400C20AAF /* LoadingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22230B229E2DF5400C20AAF /* LoadingCollectionViewCell.swift */; };
 		A22230B529E2DF5400C20AAF /* LoadingCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A22230B329E2DF5400C20AAF /* LoadingCollectionViewCell.xib */; };
+		A22230B929E446B700C20AAF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A22230B829E446B700C20AAF /* UIView+Extension.swift */; };
 		A2228E6729E0CFFC005E6E98 /* LocationHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2228E6529E0CFFC005E6E98 /* LocationHeader.swift */; };
 		A2228E6829E0CFFC005E6E98 /* LocationHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = A2228E6629E0CFFC005E6E98 /* LocationHeader.xib */; };
 		A2228E6A29E0D77D005E6E98 /* LocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2228E6929E0D77D005E6E98 /* LocationViewModel.swift */; };
@@ -46,6 +47,7 @@
 /* Begin PBXFileReference section */
 		A22230B229E2DF5400C20AAF /* LoadingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCollectionViewCell.swift; sourceTree = "<group>"; };
 		A22230B329E2DF5400C20AAF /* LoadingCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCollectionViewCell.xib; sourceTree = "<group>"; };
+		A22230B829E446B700C20AAF /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		A2228E6529E0CFFC005E6E98 /* LocationHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationHeader.swift; sourceTree = "<group>"; };
 		A2228E6629E0CFFC005E6E98 /* LocationHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationHeader.xib; sourceTree = "<group>"; };
 		A2228E6929E0D77D005E6E98 /* LocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewModel.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 			children = (
 				A2CEA94929E05BB800A8D180 /* UICollectionView+Extension.swift */,
 				A2CEA95029E0AD0900A8D180 /* UIImageView+Extension.swift */,
+				A22230B829E446B700C20AAF /* UIView+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -400,6 +403,7 @@
 				A2F2B66929E0374E0074447C /* Character.swift in Sources */,
 				A253AC6E29E1AE13009716E2 /* CharacterDetailsViewController.swift in Sources */,
 				A2C1B87F29E02E66002CEDFE /* NetworkHelper.swift in Sources */,
+				A22230B929E446B700C20AAF /* UIView+Extension.swift in Sources */,
 				A2C1B86129E0293C002CEDFE /* SceneDelegate.swift in Sources */,
 				A2F2B67929E042700074447C /* NibReuseProtocol.swift in Sources */,
 				A2CEA95129E0AD0900A8D180 /* UIImageView+Extension.swift in Sources */,

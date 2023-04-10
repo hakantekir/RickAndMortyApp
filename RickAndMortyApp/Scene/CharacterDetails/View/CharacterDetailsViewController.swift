@@ -78,10 +78,10 @@ class CharacterDetailsViewController: UIViewController, Storyboarded {
         titleLabel.text = character?.name
         titleLabel.font = UIFont(name: "Avenir-heavy", size: 17)
         navigationItem.titleView = titleLabel
-        characterImage.loadURL(url: character?.imagePath ?? "", placeholder: UIImage(named: "placeholder"))
-        statusLabel.text = character?.status
+        characterImage.loadURL(url: character?.image ?? "", placeholder: UIImage(named: "placeholder"))
+        statusLabel.text = character?.status?.rawValue
         specyLabel.text = character?.species
-        genderLabel.text = character?.gender
+        genderLabel.text = character?.gender?.rawValue
         originLabel.text = character?.origin?.name
         locationLabel.text = character?.location?.name
         episodesLabel.text = episodesString

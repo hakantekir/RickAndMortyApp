@@ -9,21 +9,28 @@ import Foundation
 
 struct Character: Codable, CharacterCellProtocol {
     let id: Int?
-    let name, status, species, type: String?
-    let gender: String?
+    let name, species, type: String?
     let origin, location: CharacterLocation?
     let image: String?
     let episode: [String]?
     let url: String?
     let created: String?
-    
-    var imagePath: String {
-        image ?? ""
-    }
-    
-    var titleText: String {
-        name ?? ""
-    }
+        
+    var status: Status?
+    var gender: Gender?
+}
+
+enum Status: String, Codable {
+    case alive = "Alive"
+    case dead = "Dead"
+    case unknown = "unknown"
+}
+
+enum Gender: String, Codable {
+    case unknown = "unknown"
+    case male = "Male"
+    case female = "Female"
+    case genderless = "Genderless"
 }
 
 struct CharacterLocation: Codable {
